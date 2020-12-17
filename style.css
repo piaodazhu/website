@@ -6,6 +6,7 @@ body {
     padding: 0px;
     margin: 0%;
     display: block;
+    z-index: 0;
 }
 .header-box {
     background-color: white;
@@ -16,7 +17,8 @@ body {
     display: grid;
     grid-template-columns: 3fr 3fr 8fr 1fr;
     position: fixed;
-    box-shadow: rgb(82, 78, 78)  0px 4px 10px 1px;;
+    box-shadow: rgb(82, 78, 78)  0px 4px 10px 1px;
+    z-index: 2;
 }
 .header-logo {
     padding-left: 20px;
@@ -79,7 +81,7 @@ body {
     text-align: center;
     font-size: 120px;
     word-spacing: 10px;
-    font-family: 'Lucida Sans';
+    font-family: 'STHeiti';
     color: white;
 }
 .Proletarians p {
@@ -94,7 +96,7 @@ body {
     color: rgb(163, 162, 162);
     margin: 20px 10px;
 }
-/* translateY */
+
 .main-box {
     display: block;
     background-color: white;
@@ -106,6 +108,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 15px;
+    padding-bottom: 30px;
     background-color: white;
 }
 .services a {
@@ -144,28 +147,181 @@ body {
       height: 115px;
     }
   }
-.message-board {
+
+hr {
+    border: none;
+    border-top: 3px solid #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr:after {
+    background: #fff;
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+
+.introduction-board {
     display: block;
-    background-color: white;
+    /*background-color: rgb(240, 240, 240);*/
+    background-image: url(images/pictures/bg.png);
+    background-size: cover;
+    background-position: center;
     width: 100%;
     margin: 0%;
+    margin-bottom: 10px;
     padding: 30px 0px;
+}
+
+.introduction-board article {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 40%;
+}
+.introduction-board article:nth-child(odd) {
+    margin-left: 10%;
+    text-align: left;
+}
+.introduction-board article:nth-child(even) {
+    margin-left: 50%;
+    text-align: right;
+}
+.introduction-board h1 {
+    font-size: 250%;
+    font-family: 'STZhongsong';
+    color: #333;
+    text-align: center;
+}
+.introduction-board h1 span {
+    padding: 5px;
+    border-top: rgb(207, 238, 255) solid 10px;
+    border-bottom: rgb(229, 188, 229) solid 10px;
+}
+.introduction-board p {
+    font-size: 120%;
+    font-family: 'YouYuan';
+    color: #333;
+    text-align: center;
+    line-height: 50px;
 }
 .site-info {
     display: block;
-    background-color: white;
+    background-image: url(images/pictures/colorsea.jpg);
+    background-attachment: fixed;
     margin: 0%;
-    padding: 30px 0px;
+    padding: 25px 0px;
     width: 100%;
+    height: 240px;
+    position: relative;
+    z-index: 0;
+    border-bottom: rgba(255, 255, 255, 0.37) solid 10px;
+}
+.site-info div {
+    width: 90%;
+    margin: auto;
+    height: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.site-info .upperglass {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    box-shadow: rgb(0, 0, 0) 1px 2px 5px 1px;
+}
+.site-info .lowerglass{
+    background-image: url(images/pictures/colorsea.jpg);
+    background-attachment: fixed;
+    filter: blur(6px);
+    position: relative;
+    top: -98%;
+    z-index: 1;
+}
+.site-info div div {
+    border-bottom: solid white 5px;
+    width: 10%;
+    height: 10px;
+    margin: 10px 45% 0px 45%;
+    border-radius: 0;
+}
+.site-info .register-text {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 200%;
+    margin-top: 10px;
+    font-family: 'STHeiti';
+}
+.site-info .register-link {
+    display: block;
+    width: 14%;
+    margin-left: 43%;
+    text-decoration: none;
+    font-size: 120%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border: rgb(255, 255, 255) solid 2px;
+    border-radius: 5px;
+    text-align: center;
 }
 
+.site-info .register-link:hover {
+    color: black;
+    background: white;
+}
 .footer-box {
-    height: 200px;
-    background-color: lightblue;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
     margin: 0%;
-    padding: 30px 0px;
+    padding: 30px 0px 0px 0px;
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 8fr 1fr;
+}
+.footer-box article {
+    margin: 10px;
+    background-color:rgb(236, 250, 255);
+    border: solid white 3px;
+    border-radius: 20px;
+    box-shadow: rgba(95, 93, 93, 0.418) 1px 1px 5px 1px;
+    padding: 10px;
+}
+.footer-box .copyright {
+    grid-column: 1 / 4;
+    text-align: center;
+    font-size: 60%;
+    margin-bottom: 0%;
+    padding: 0%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.footer-box article h1 {
+    text-align: center;
+    font-family: 'Century Gothic';
+    font-size: 80%;
+    color: rgb(79, 103, 128);
+    border-left: rgb(146, 151, 155) solid 10px;
+    border-right: rgb(240, 207, 240) solid 10px;
+}
+.footer-box article p {
+    font-size: 80%;
+    font-family: 'Century Gothic';
+    line-height: 200%;
+}
+.footer-box article p::first-letter {
+    font-size: 200%;
+    float: left;
+}
+.footer-box .donate {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
 }
