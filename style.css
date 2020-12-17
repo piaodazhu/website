@@ -56,13 +56,21 @@ body {
     font-family: "Microsoft YaHei";
     color: black;
 }
+.header-nav li a:hover {
+    border-bottom: rgb(104, 104, 104) solid 3px;
+}
 .login {
     margin-top: 13px;
     margin-left: 30px;
     border: solid black 2px;
-    border-radius: 20%;
+    border-radius: 50%;
     height: 30px;
     width: 30px;
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+.login:hover {
+    transform: rotate(45deg);
 }
 .login img {
     height: 100%;
@@ -169,7 +177,7 @@ hr:after {
 .introduction-board {
     display: block;
     /*background-color: rgb(240, 240, 240);*/
-    background-image: url(images/pictures/bg.png);
+    background-image: url(images/pictures/bg2.png);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -184,11 +192,11 @@ hr:after {
     width: 40%;
 }
 .introduction-board article:nth-child(odd) {
-    margin-left: 10%;
+    margin-left: 5%;
     text-align: left;
 }
 .introduction-board article:nth-child(even) {
-    margin-left: 50%;
+    margin-left: 55%;
     text-align: right;
 }
 .introduction-board h1 {
@@ -203,11 +211,11 @@ hr:after {
     border-bottom: rgb(229, 188, 229) solid 10px;
 }
 .introduction-board p {
-    font-size: 120%;
+    font-size: 110%;
     font-family: 'YouYuan';
     color: #333;
     text-align: center;
-    line-height: 50px;
+    line-height: 35px;
 }
 .site-info {
     display: block;
@@ -271,6 +279,8 @@ hr:after {
     border: rgb(255, 255, 255) solid 2px;
     border-radius: 5px;
     text-align: center;
+    transition-duration: .3s;
+    transition-property: color background;
 }
 
 .site-info .register-link:hover {
