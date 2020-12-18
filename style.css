@@ -22,9 +22,10 @@ body {
 }
 .header-logo {
     padding-left: 20px;
+    margin-top: auto;
 }
 .header-logo img {
-    height: 60px;
+    height: 50px;
 }
 .header-nav {
     padding: 15px;
