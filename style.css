@@ -220,7 +220,7 @@ hr:after {
 }
 .site-info {
     display: block;
-    background-image: url(images/pictures/colorsea.jpg);
+    background-image: url(images/pictures/color.jpg);
     background-attachment: fixed;
     margin: 0%;
     padding: 25px 0px;
@@ -245,7 +245,7 @@ hr:after {
     box-shadow: rgb(0, 0, 0) 1px 2px 5px 1px;
 }
 .site-info .lowerglass{
-    background-image: url(images/pictures/colorsea.jpg);
+    background-image: url(images/pictures/color.jpg);
     background-attachment: fixed;
     filter: blur(6px);
     position: relative;
