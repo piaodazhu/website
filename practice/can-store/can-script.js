@@ -2,7 +2,7 @@
 // report any errors that occur in the fetch operation
 // once the products have been successfully loaded and formatted as a JSON object
 // using response.json(), run the initialize() function
-fetch('products.json').then(function(response) {
+fetch('https://piaodazhu.github.io/myfiles/products.json').then(function(response) {
   return response.json();
 }).then(function(json) {
   let products = json;
@@ -141,7 +141,7 @@ function initialize(products) {
   // display it
   function fetchBlob(product) {
     // construct the URL path to the image file from the product.image property
-    let url = 'images/' + product.image;
+    let url = 'https://piaodazhu.github.io/myfiles/images/' + product.image;
     // Use fetch to fetch the image, and convert the resulting response to a blob
     // Again, if any errors occur we report them in the console.
     fetch(url).then(function(response) {
